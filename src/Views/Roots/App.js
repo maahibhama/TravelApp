@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, StatusBar } from 'react-native';
 import PropTypes from "prop-types";
 
 import AppNavigation from '../../Navigations/AppNavigation';
@@ -50,6 +50,7 @@ export default class App extends Component {
     render() {
         return (
             <View style={styles.container}>
+               <StatusBar barStyle="light-content" />
                 <Loader isLoading={this.state.activityIndicatorVisible} />
                 {this.renderAppAlert()}
                 <AppNavigation />
