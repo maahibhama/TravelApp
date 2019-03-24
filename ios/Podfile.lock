@@ -1,0 +1,30 @@
+PODS:
+  - React (0.58.4):
+    - React/Core (= 0.58.4)
+  - React/Core (0.58.4):
+    - yoga (= 0.58.4.React)
+  - RNI18n (2.0.15):
+    - React
+  - yoga (0.58.4.React)
+
+DEPENDENCIES:
+  - React (from `../node_modules/react-native`)
+  - RNI18n (from `../node_modules/react-native-i18n`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+
+EXTERNAL SOURCES:
+  React:
+    :path: "../node_modules/react-native"
+  RNI18n:
+    :path: "../node_modules/react-native-i18n"
+  yoga:
+    :path: "../node_modules/react-native/ReactCommon/yoga"
+
+SPEC CHECKSUMS:
+  React: 6b36b9732ee830d06b470dc4ecdd6837718abe63
+  RNI18n: e2f7e76389fcc6e84f2c8733ea89b92502351fd8
+  yoga: a767b95565bc4e939c7bf241a872cc29bad2f984
+
+PODFILE CHECKSUM: 8299f39c79256382b3f4cc7679e3ffd4dae8e9ea
+
+COCOAPODS: 1.6.0
