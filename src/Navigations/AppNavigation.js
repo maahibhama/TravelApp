@@ -1,17 +1,18 @@
-import {
-    Platform,
-} from 'react-native';
-import { createStackNavigator, createAppContainer, createSwitchNavigator } from "react-navigation";
+import { createAppContainer, createSwitchNavigator } from "react-navigation";
 import Routes from './Routes';
-import WelcomeView from '../Views/GetStarted/WelcomeView';
+import { AuthNavigator } from "./AuthNavigator";
+import AuthLoadingView from "../Views/GetStarted/AuthLoadingView";
+import { TabNavigator } from "./TabNavigator";
 
 
 const AppNavigator = createSwitchNavigator(
     {
-        [Routes.WelcomeView]: WelcomeView
+        [Routes.AuthLoadingView]: AuthLoadingView,
+        [Routes.TabNavigator]: TabNavigator,
+        [Routes.AuthNavigator]: AuthNavigator,
     },
     {
-        initialRouteName: Routes.WelcomeView
+        initialRouteName: Routes.AuthLoadingView
     }
 );
 
