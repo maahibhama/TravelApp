@@ -1,5 +1,5 @@
 export const Color = {
-    themeDark: '#667EEA',
+    themeDark: '#6200EE',
     themeLight: '#64B6FF',
     themeExtraLight: '#E25C58',
 
