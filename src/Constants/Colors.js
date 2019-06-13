@@ -4,6 +4,7 @@ export const Color = {
     themeExtraLight: '#E25C58',
 
     themeBackground: '#FFFFFF',
+    defaultTheme: '#8C8C98',
     offWhiteBackground: '#F6F6F6',
 
     themeText: "#707070",
