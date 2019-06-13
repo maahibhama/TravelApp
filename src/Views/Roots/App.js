@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import AppNavigation from '../../Navigations/AppNavigation';
 import AppAlert from '../../Components/Alerts/AppAlert';
 import Loader from '../../Components/Loading/Loader';
+import { Color } from '../../Constants/Colors';
 
 export default class App extends Component {
 
@@ -74,6 +75,7 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        backgroundColor: Color.themeBackground
     }
 })
