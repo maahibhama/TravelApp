@@ -9,9 +9,10 @@ export default StyleSheet.create({
   touchView:{
     marginVertical: 10,
     marginRight: 10,
-    shadowColor: Color.darkText,
+    borderRadius: 20,
+    shadowColor: Color.shadow,
     shadowOpacity: 0.1,
-    borderRadius: 20
+    elevation: 3
   },
   textContainer: {
     paddingHorizontal: 20,

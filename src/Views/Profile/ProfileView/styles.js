@@ -54,6 +54,9 @@ export default StyleSheet.create({
     padding: 0,
     fontSize: AppFont.title.size,
     fontFamily: AppFont.title.name,
-    fontWeight: AppFont.title.weight
+    fontWeight: AppFont.title.weight,
+    shadowColor: Color.shadow,
+    shadowOpacity: 0.1,
+    elevation: 3
   }
 })
