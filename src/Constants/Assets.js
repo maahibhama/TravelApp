@@ -9,5 +9,6 @@ export const Icons = {
   hotels: require('../Assets/Icons/hotels_icon/hotels_icon.png'),
   chartbot: require('../Assets/Icons/chartbot_icon/chartbot_icon.png'),
   profile: require('../Assets/Icons/profile_icon/profile_icon.png'),
-  profileEdit: require('../Assets/Icons/profile_edit_icon/profile_edit_icon.png')
+  profileEdit: require('../Assets/Icons/profile_edit_icon/profile_edit_icon.png'),
+  search: require('../Assets/Icons/search_icon/search_icon.png')
 }
