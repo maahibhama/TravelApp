@@ -12,8 +12,10 @@ export default {
   signUp03: 'Already have an account?',
   forgotPassword01: 'Reset your password',
   profile01: 'Profile',
+  profile02: 'Visited Place',
   flights01: 'Flight',
   chartbot01: 'Chartbot',
   hotels01: 'Hotels',
-  travel01: 'Travel'
+  travel01: 'Travel',
+  travel02: 'Enjoy your life with us!',
 }
