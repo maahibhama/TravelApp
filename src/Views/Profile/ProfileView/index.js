@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 
 import I18n from '../../../localization/i18n'
 import { Icons } from '../../../Constants/Assets'
+import { Places, Place } from '../../../Constants/Constants'
 import TitleNavigationHeader from '../../../Components/navigation-header/TitleNavigationHeader'
 import ManageKeyboardScrollView from '../../../Constants/ManageKeyboardScrollView'
 import PlaceCollectionView from '../../../Components/PlaceCollectionView'
 
 import styles from './styles'
-import { Places, PlaceUrl } from '../../../Constants/Constants'
 
 class ProfileView extends Component {
   static navigationOptions = {
@@ -61,12 +61,14 @@ class ProfileView extends Component {
   renderProfileInfoView () {
     return (
       <View style={styles.profileView}>
+        <View style={styles.imageContainer}>
         <Image
-          source={{ uri: PlaceUrl }}
+          source={{ uri: Place.url }}
           resizeMode={'cover'}
           resizeMethod={'resize'}
           style={styles.profileImage}
         />
+        </View>
         <View style={styles.titleDetailsView}>
           <Text style={styles.titleText}>{'Maahi Bhama'}</Text>
           <Text style={styles.subtitleText}>{'A developer'}</Text>

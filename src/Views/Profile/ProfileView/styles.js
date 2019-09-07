@@ -14,8 +14,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     padding: 10
   },
-  profileImage: {
-    resizeMode: 'cover',
+  imageContainer:{
     width: 70,
     height: 70,
     overflow: 'hidden',
@@ -23,6 +22,10 @@ export default StyleSheet.create({
     borderRadius: 35,
     borderWidth: 2,
     borderColor: Color.themeDark
+  },
+  profileImage: {
+    width: 70,
+    height: 70,
   },
   titleDetailsView: {
     flex: 1,

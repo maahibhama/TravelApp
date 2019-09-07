@@ -1,22 +1,35 @@
+export const Place = {
+   url: 'https://www.wien.info/media/images/40367-graben-einkaufen-shopping-altstadt-einkaufsstrassen-3to2.jpeg/image_teaser-lead'
+}
 export const Places = [
   {
     id: '1',
-    image: PlaceUrl,
+    image: Place.url,
     name: 'Vienna'
   },
   {
     id: '2',
-    image: PlaceUrl,
+    image: Place.url,
     name: 'Vienna'
   },
   {
     id: '3',
-    image: PlaceUrl,
+    image: Place.url,
     name: 'Vienna'
   },
   {
     id: '4',
-    image: PlaceUrl,
+    image: Place.url,
+    name: 'Vienna'
+  },
+  {
+    id: '5',
+    image: Place.url,
+    name: 'Vienna'
+  },
+  {
+    id: '6',
+    image: Place.url,
     name: 'Vienna'
   }
 ]
