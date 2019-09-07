@@ -1,22 +1,26 @@
 import React, { Component } from 'react'
-import { SafeAreaView, View } from 'react-native'
+import { SafeAreaView, View, Image, Text, TextInput } from 'react-native'
 import PropTypes from 'prop-types'
 
 import I18n from '../../../localization/i18n'
-import BaseNavigationHeader from '../../../Components/navigation-header/BaseNavigationHeader'
+import { Icons } from '../../../Constants/Assets'
+import TitleNavigationHeader from '../../../Components/navigation-header/TitleNavigationHeader'
+import ManageKeyboardScrollView from '../../../Constants/ManageKeyboardScrollView'
+import PlaceCollectionView from '../../../Components/PlaceCollectionView'
 
 import styles from './styles'
-import { Icons } from '../../../Constants/Assets'
-import ManageKeyboardScrollView from '../../../Constants/ManageKeyboardScrollView';
+import { Places, PlaceUrl } from '../../../Constants/Constants'
 
 class ProfileView extends Component {
   static navigationOptions = {
     header: null
   }
 
-  static defaultProps = {}
-
-  static propTypes = {}
+  state = {
+    name: 'Maahi Bhama',
+    email: 'maahibhama@gmail.com',
+    password: 'way2sucess'
+  }
 
   onClickRightButton = this.onClickRightButton.bind(this)
 
@@ -25,7 +29,7 @@ class ProfileView extends Component {
   render () {
     return (
       <SafeAreaView style={styles.container}>
-        <BaseNavigationHeader
+        <TitleNavigationHeader
           navigation={this.props.navigation}
           title={I18n.t('profile01')}
           showRightButton
@@ -42,11 +46,100 @@ class ProfileView extends Component {
     )
   }
 
-  renderMiddleView() {
-    return(<View style={styles.middleView}>
-      
-    </View>)
+  renderMiddleView () {
+    return (
+      <View style={styles.middleView}>
+        {this.renderProfileInfoView()}
+        {this.renderNameInput()}
+        {this.renderEmailAddress()}
+        {this.renderPasswordInput()}
+        {this.renderVisitedPlaces()}
+      </View>
+    )
   }
 
+  renderProfileInfoView () {
+    return (
+      <View style={styles.profileView}>
+        <Image
+          source={{ uri: PlaceUrl }}
+          resizeMode={'cover'}
+          resizeMethod={'resize'}
+          style={styles.profileImage}
+        />
+        <View style={styles.titleDetailsView}>
+          <Text style={styles.titleText}>{'Maahi Bhama'}</Text>
+          <Text style={styles.subtitleText}>{'A developer'}</Text>
+        </View>
+      </View>
+    )
+  }
+
+  renderNameInput () {
+    return (
+      <TextInput
+        underlineColorAndroid={'transparent'}
+        ref={'nameTextField'}
+        placeholder={I18n.t('signUp02')}
+        autoCapitalize={'sentences'}
+        returnKeyType={'next'}
+        autoCorrect={false}
+        style={styles.inputViewStyle}
+        onChangeText={text => this.setState({ email: text })}
+        onSubmitEditing={event => {
+          this.refs.emailTextField.focus()
+        }}
+        value={this.state.name}
+      />
+    )
+  }
+
+  renderEmailAddress () {
+    return (
+      <TextInput
+        underlineColorAndroid={'transparent'}
+        ref={'emailTextField'}
+        placeholder={I18n.t('signIn02')}
+        keyboardType={'email-address'}
+        autoCapitalize={'none'}
+        returnKeyType={'next'}
+        autoCorrect={false}
+        style={styles.inputViewStyle}
+        onChangeText={text => this.setState({ email: text })}
+        onSubmitEditing={event => {
+          this.refs.passwordTextField.focus()
+        }}
+        value={this.state.email}
+      />
+    )
+  }
+
+  renderPasswordInput () {
+    return (
+      <TextInput
+        underlineColorAndroid={'transparent'}
+        ref={'passwordTextField'}
+        placeholder={I18n.t('signIn03')}
+        returnKeyType={'done'}
+        autoCapitalize={'none'}
+        autoCorrect={false}
+        secureTextEntry={!this.state.isShowingPassword}
+        style={styles.inputViewStyle}
+        onChangeText={text => this.setState({ password: text })}
+        onSubmitEditing={this.signInButtonAction}
+        value={this.state.password}
+      />
+    )
+  }
+
+  renderVisitedPlaces () {
+    return (
+      <PlaceCollectionView
+        navigation={this.props.navigation}
+        data={Places}
+        headerTitle={I18n.t('profile02')}
+      />
+    )
+  }
 }
 export default ProfileView
