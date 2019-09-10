@@ -58,5 +58,13 @@ export default StyleSheet.create({
     shadowColor: Color.shadow,
     shadowOpacity: 0.1,
     elevation: 3
-  }
+  },
+  logoutButtonStyle: {
+    marginTop: 40,
+    marginHorizontal: 20,
+    backgroundColor: Color.themeDark
+  },
+  logoutButtonTextStyle: {
+    color: Color.brightText
+  },
 })

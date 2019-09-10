@@ -13,6 +13,7 @@ export default {
   forgotPassword01: 'Reset your password',
   profile01: 'Profile',
   profile02: 'Visited Place',
+  profile03: 'Log Out',
   flights01: 'Flight',
   chartbot01: 'Chartbot',
   hotels01: 'Hotels',

@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import { SafeAreaView, View, Image, Text, TextInput } from 'react-native'
 import PropTypes from 'prop-types'
+import { NavigationActions } from 'react-navigation'
 
+import Routes from '../../../Navigations/Routes'
 import I18n from '../../../localization/i18n'
 import { Icons } from '../../../Constants/Assets'
 import { Places, Place } from '../../../Constants/Constants'
+import AppButton from '../../../Components/base-componets/AppButton'
 import TitleNavigationHeader from '../../../Components/navigation-header/TitleNavigationHeader'
 import ManageKeyboardScrollView from '../../../Constants/ManageKeyboardScrollView'
 import PlaceCollectionView from '../../../Components/PlaceCollectionView'
@@ -23,8 +26,13 @@ class ProfileView extends Component {
   }
 
   onClickRightButton = this.onClickRightButton.bind(this)
+  logoutButtonAction = this.logoutButtonAction.bind(this)
 
   onClickRightButton () {}
+
+  logoutButtonAction() {
+    this.props.navigation.dispatch(NavigationActions.navigate({ routeName: Routes.AuthNavigator }))
+  }
 
   render () {
     return (
@@ -54,6 +62,7 @@ class ProfileView extends Component {
         {this.renderEmailAddress()}
         {this.renderPasswordInput()}
         {this.renderVisitedPlaces()}
+        {this.renderLogoutButton()}
       </View>
     )
   }
@@ -140,6 +149,17 @@ class ProfileView extends Component {
         navigation={this.props.navigation}
         data={Places}
         headerTitle={I18n.t('profile02')}
+      />
+    )
+  }
+
+  renderLogoutButton() {
+    return (
+      <AppButton
+        title={I18n.t('profile03')}
+        onTouch={this.logoutButtonAction}
+        styles={styles.logoutButtonStyle}
+        textStyles={styles.logoutButtonTextStyle}
       />
     )
   }
