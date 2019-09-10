@@ -1,3 +1,8 @@
+import { Dimensions } from 'react-native'
+
+export const ScreenWidth = Dimensions.get('window').width
+export const ScreenHeight = Dimensions.get('window').height
+
 export const Place = {
    url: 'https://www.wien.info/media/images/40367-graben-einkaufen-shopping-altstadt-einkaufsstrassen-3to2.jpeg/image_teaser-lead'
 }
