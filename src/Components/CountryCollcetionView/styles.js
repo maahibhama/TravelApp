@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native'
 import { Color } from '../../Constants/Colors'
 import { AppFont } from '../../Constants/Fonts'
+import AppStyles from '../../Constants/AppStyles'
 
 export default StyleSheet.create({
   tableView: {
@@ -10,9 +11,7 @@ export default StyleSheet.create({
     marginVertical: 10,
     marginRight: 10,
     borderRadius: 20,
-    shadowColor: Color.shadow,
-    shadowOpacity: 0.1,
-    elevation: 3
+    ...AppStyles.shadow
   },
   textContainer: {
     paddingHorizontal: 20,

@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native'
 import { Color } from '../../Constants/Colors'
 import { AppFont } from '../../Constants/Fonts'
+import AppStyles from '../../Constants/AppStyles'
 
 export default StyleSheet.create({
   tableView: {
@@ -12,7 +13,8 @@ export default StyleSheet.create({
     aspectRatio: 1.25,
     margin: 10,
     overflow: 'hidden',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+    ...AppStyles.shadow
   },
   textContainer: {
     flexDirection: 'row'

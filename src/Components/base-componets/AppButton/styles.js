@@ -1,6 +1,8 @@
 import { StyleSheet } from 'react-native'
+
 import { AppFont } from '../../../Constants/Fonts'
 import { Color } from '../../../Constants/Colors'
+import AppStyles from '../../../Constants/AppStyles'
 
 export default StyleSheet.create({
   viewStyle: {
@@ -8,9 +10,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 5,
-    shadowColor: Color.shadow,
-    shadowOpacity: 0.1,
-    elevation: 3
+    ...AppStyles.shadow
   },
   textStyle: {
     fontSize: AppFont.titleLargeBold.size,

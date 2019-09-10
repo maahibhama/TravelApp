@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native'
 import { AppFont } from '../../../Constants/Fonts'
 import { Color } from '../../../Constants/Colors'
+import AppStyles from '../../../Constants/AppStyles'
 
 export default StyleSheet.create({
   container: {
@@ -25,9 +26,7 @@ export default StyleSheet.create({
     fontSize: AppFont.title.size,
     fontFamily: AppFont.title.name,
     fontWeight: AppFont.title.weight,
-    shadowColor: Color.darkText,
-    shadowOpacity: 0.1,
-    elevation: 3
+    ...AppStyles.shadow
   },
   signUpButtonStyle: {
     marginTop: 40,
