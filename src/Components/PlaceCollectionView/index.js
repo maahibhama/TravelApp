@@ -1,54 +1,58 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
-import { View, FlatList } from "react-native";
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+import { View, FlatList } from 'react-native'
 
-import PlaceItemView from "./PlaceItemView";
-import ItemHeaderView from "./ItemHeaderView";
-import styles from "./styles";
+import PlaceItemView from './PlaceItemView'
+import ItemHeaderView from './ItemHeaderView'
+import styles from './styles'
 
 export default class PlaceCollectionView extends PureComponent {
-    static propTypes = {
-        data: PropTypes.array,
-        headerTitle: PropTypes.string,
-        navigation: PropTypes.object.isRequired
-    };
+  static propTypes = {
+    data: PropTypes.array,
+    headerTitle: PropTypes.string,
+    navigation: PropTypes.object.isRequired
+  }
 
-    static defaultProps = {
-        data: [],
-        headerTitle: ''
-    }
+  static defaultProps = {
+    data: [],
+    headerTitle: ''
+  }
 
-    renderItem = this.renderItem.bind(this)
+  renderItem = this.renderItem.bind(this)
 
-    onClickSeeAll() {
-       // this.props.navigation.navigate(Routes.Featured)
-    }
+  onClickSeeAll () {
+    // this.props.navigation.navigate(Routes.Featured)
+  }
 
-    onTouchCategory(item) {
-        //this.props.navigation.navigate(Routes.Featured)
-    }
+  onTouchCategory (item) {
+    // this.props.navigation.navigate(Routes.Featured)
+  }
 
-    render() {
-        return (
-            <View style={styles.containerView}>
-                <ItemHeaderView title={this.props.headerTitle} />
-                <FlatList
-                    extraData={this.state}
-                    data={this.props.data}
-                    horizontal={true}
-                    renderItem={this.renderItem}
-                    keyExtractor={(item, index) => item.id}
-                    showsHorizontalScrollIndicator={false}
-                    contentContainerStyle={styles.tableView}
-                />
-            </View>
-        )
-    }
+  render () {
+    return (
+      <View style={styles.containerView}>
+        <ItemHeaderView title={this.props.headerTitle} />
+        <FlatList
+          extraData={this.state}
+          data={this.props.data}
+          horizontal
+          renderItem={this.renderItem}
+          keyExtractor={(item, index) => item.id}
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.tableView}
+        />
+      </View>
+    )
+  }
 
-    renderItem({ item }) {
-        return (
-            <PlaceItemView info={item} onTouch={() => { this.onTouchCategory(item) }} />
-        )
-    }
-
+  renderItem ({ item }) {
+    return (
+      <PlaceItemView
+        info={item}
+        onTouch={() => {
+          this.onTouchCategory(item)
+        }}
+      />
+    )
+  }
 }
