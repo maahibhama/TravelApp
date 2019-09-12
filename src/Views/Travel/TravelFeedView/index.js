@@ -7,9 +7,11 @@ import { Icons } from '../../../Constants/Assets'
 import TitleNavigationHeader from '../../../Components/navigation-header/TitleNavigationHeader'
 import ManageKeyboardScrollView from '../../../Constants/ManageKeyboardScrollView'
 import CountryCollcetionView from '../../../Components/CountryCollcetionView'
+import FavoritePlacesView from '../../../Components/FavoritePlacesView'
+import { Countries, Places } from '../../../Constants/Constants'
+import PlaceCollectionView from '../../../Components/PlaceCollectionView'
 
 import styles from './styles'
-import { Countries } from '../../../Constants/Constants'
 
 class TravelFeedView extends Component {
   static navigationOptions = {
@@ -44,12 +46,35 @@ class TravelFeedView extends Component {
     return (
       <View style={styles.middleView}>
         {this.renderCountryCollectionView()}
+        {this.renderFavoritePlaces()}
+        {this.renderTopCity()}
+        {this.renderBlogView()}
       </View>
     )
   }
 
   renderCountryCollectionView () {
     return <CountryCollcetionView data={Countries} />
+  }
+
+  renderFavoritePlaces () {
+    return (
+      <FavoritePlacesView navigation={this.props.navigation} data={Places} />
+    )
+  }
+
+  renderTopCity () {
+    return (
+      <PlaceCollectionView
+        navigation={this.props.navigation}
+        data={Places}
+        headerTitle={I18n.t('travel03')}
+      />
+    )
+  }
+
+  renderBlogView () {
+    return <View />
   }
 }
 export default TravelFeedView
