@@ -18,5 +18,6 @@ export const Color = {
     lightFill: '#BBBBBB',
     shadow: '#000000',
 
-    actionTint: '#0072BB'
+    actionTint: '#0072BB',
+    transparent: 'transparent'
 }
