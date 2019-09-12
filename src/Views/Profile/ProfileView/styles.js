@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native'
 import { Color } from '../../../Constants/Colors'
 import { AppFont } from '../../../Constants/Fonts'
+import AppStyles from '../../../Constants/AppStyles'
 
 export default StyleSheet.create({
   container: {
@@ -55,9 +56,7 @@ export default StyleSheet.create({
     fontSize: AppFont.title.size,
     fontFamily: AppFont.title.name,
     fontWeight: AppFont.title.weight,
-    shadowColor: Color.shadow,
-    shadowOpacity: 0.1,
-    elevation: 3
+    ...AppStyles.shadow
   },
   logoutButtonStyle: {
     marginTop: 40,
