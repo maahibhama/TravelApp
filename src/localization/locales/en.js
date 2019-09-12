@@ -19,5 +19,6 @@ export default {
   hotels01: 'Hotels',
   travel01: 'Travel',
   travel02: 'Enjoy your life with us!',
-  travel03: 'Top Cities'
+  travel03: 'Top Cities',
+  travel04: 'Blogs'
 }
