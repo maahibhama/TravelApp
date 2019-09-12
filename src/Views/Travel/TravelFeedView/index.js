@@ -10,6 +10,7 @@ import CountryCollcetionView from '../../../Components/CountryCollcetionView'
 import FavoritePlacesView from '../../../Components/FavoritePlacesView'
 import { Countries, Places } from '../../../Constants/Constants'
 import PlaceCollectionView from '../../../Components/PlaceCollectionView'
+import BlogsView from '../../../Components/BlogsView'
 
 import styles from './styles'
 
@@ -74,7 +75,13 @@ class TravelFeedView extends Component {
   }
 
   renderBlogView () {
-    return <View />
+    return (
+      <BlogsView
+        data={Places}
+        navigation={this.props.navigation}
+        headerTitle={I18n.t('travel04')}
+      />
+    )
   }
 }
 export default TravelFeedView
