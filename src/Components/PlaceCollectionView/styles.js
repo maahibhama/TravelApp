@@ -7,14 +7,17 @@ export default StyleSheet.create({
   tableView: {
     paddingHorizontal: 10
   },
+  touchView:{
+    borderRadius: 5,
+    margin: 10,
+    ...AppStyles.shadow
+  },
   container: {
     borderRadius: 5,
+    overflow: 'hidden',
     width: 120,
     aspectRatio: 1.25,
-    margin: 10,
-    overflow: 'hidden',
     justifyContent: 'flex-end',
-    ...AppStyles.shadow
   },
   textContainer: {
     flexDirection: 'row'

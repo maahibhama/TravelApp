@@ -19,6 +19,7 @@ export default class PlaceItemView extends PureComponent {
       <TouchableHighlight
         onPress={this.props.onTouch}
         underlayColor={'transparent'}
+        style={styles.touchView}
       >
         <ImageBackground
           source={{ uri: this.props.info.image }}
