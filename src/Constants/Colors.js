@@ -12,6 +12,7 @@ export const Color = {
     lightText: '#A6A6A6',
     brightText: '#FFFFFF',
     placeholderText: '#BBBBBB',
+    errorText: '#FD3939',
 
     lightBorder: '#BBBBBB',
     brightBorder: '#DADADA',
