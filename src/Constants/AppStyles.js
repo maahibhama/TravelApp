@@ -4,8 +4,8 @@ import { Color } from './Colors';
 export default StyleSheet.create({
   shadow: {
     shadowColor: Color.shadow,
-    shadowOpacity: 0.3,
-    shadowOffset:{ width: 3, height: 3},
-    elevation: 3
+    shadowOpacity: 0.2,
+    shadowOffset:{ width: 0, height: 4},
+    elevation: 5
   },
 })
