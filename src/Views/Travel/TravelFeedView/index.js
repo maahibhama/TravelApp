@@ -11,6 +11,7 @@ import FavoritePlacesView from '../../../Components/FavoritePlacesView'
 import { Countries, Places } from '../../../Constants/Constants'
 import PlaceCollectionView from '../../../Components/PlaceCollectionView'
 import BlogsView from '../../../Components/BlogsView'
+import SearchBarView from '../../../Components/SearchBarView'
 
 import styles from './styles'
 
@@ -22,6 +23,34 @@ class TravelFeedView extends Component {
   static defaultProps = {}
 
   static propTypes = {}
+
+  state = {
+    showSearchBar: false,
+    searchText: ''
+  }
+  
+  onClickRightButton = this.onClickRightButton.bind(this)
+  onChangeText = this.onChangeText.bind(this)
+  setRef = this.setRef.bind(this);
+
+  onClickRightButton () {
+    this.setState(
+      { showSearchBar: !this.state.showSearchBar, searchText: '' },
+      () => {
+        if(this.searchTextField != null){
+          this.searchTextField.focus()
+        }
+      }
+    )
+  }
+
+  onChangeText ({ text }) {
+    this.setState({ searchText: text })
+  }
+
+  setRef(input) {
+    this.searchTextField = input
+  }
 
   render () {
     return (
@@ -44,13 +73,26 @@ class TravelFeedView extends Component {
   }
 
   renderMiddleView () {
+    const { showSearchBar } = this.state
     return (
       <View style={styles.middleView}>
-        {this.renderCountryCollectionView()}
+        {showSearchBar && this.renderSearchBar()}
+        {!showSearchBar && this.renderCountryCollectionView()}
         {this.renderFavoritePlaces()}
         {this.renderTopCity()}
         {this.renderBlogView()}
       </View>
+    )
+  }
+
+  renderSearchBar () {
+    return (
+      <SearchBarView
+        setRef={this.setRef}
+        title={I18n.t('travel05')}
+        searchText={this.state.searchText}
+        onChangeText={this.onChangeText}
+      />
     )
   }
 
