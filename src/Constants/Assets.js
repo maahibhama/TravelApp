@@ -12,5 +12,6 @@ export const Icons = {
   profileEdit: require('../Assets/Icons/profile_edit_icon/profile_edit_icon.png'),
   search: require('../Assets/Icons/search_icon/search_icon.png'),
   heartSelected: require('../Assets/Icons/heart_selected_icon/heart_selected_icon.png'),
-  heartUnselected: require('../Assets/Icons/heart_unselected_icon/heart_unselected_icon.png')
+  heartUnselected: require('../Assets/Icons/heart_unselected_icon/heart_unselected_icon.png'),
+  filter: require('../Assets/Icons/filter_icon/filter_icon.png')
 }
