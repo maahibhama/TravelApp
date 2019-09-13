@@ -36,7 +36,7 @@ export default StyleSheet.create({
     flex: 1,
     paddingLeft: 5
   },
-  profilePhotoContainer:{
+  profilePhotoContainer: {
     width: 90,
     justifyContent: 'center'
   },
@@ -50,7 +50,7 @@ export default StyleSheet.create({
     fontWeight: AppFont.titleBold.weight,
     color: Color.darkText
   },
-  subtitleTextStyle:{
+  subtitleTextStyle: {
     marginTop: 5,
     textAlign: 'left',
     fontSize: AppFont.titleExtraSmall.size,
@@ -77,10 +77,22 @@ export default StyleSheet.create({
     fontWeight: AppFont.titleSmallMedium.weight,
     color: Color.themeText
   },
-  placeConatainerView:{
-    padding: 10,
+  placeConatainerView: {
+    padding: 10
   },
-  placeTableView:{
+  placeTableView: {
     height: 40
+  },
+  dotContainer: {
+    paddingVertical: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row'
+  },
+  dotsItem: {
+    marginLeft: 5,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: Color.darkText
   }
 })
