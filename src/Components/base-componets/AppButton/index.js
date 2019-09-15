@@ -11,8 +11,8 @@ import styles from './styles'
 export default class AppButton extends Component {
     static propTypes = {
         title: PropTypes.string.isRequired,
-        styles: PropTypes.object,
-        textStyles: PropTypes.object,
+        styles: PropTypes.any,
+        textStyles: PropTypes.any,
         onTouch: PropTypes.func
     };
 
