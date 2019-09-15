@@ -12,6 +12,7 @@ import styles from './styles'
 import { Icons } from '../../../Constants/Assets'
 import { Places } from '../../../Constants/Constants'
 import OfferCollectionView from '../../../Components/OfferCollectionView'
+import Routes from '../../../Navigations/Routes'
 
 class HotelsFeedView extends Component {
   static navigationOptions = {
@@ -29,7 +30,9 @@ class HotelsFeedView extends Component {
   onClickRightButton = this.onClickRightButton.bind(this)
   onChangeText = this.onChangeText(this)
 
-  onClickRightButton () {}
+  onClickRightButton () {
+    this.props.navigation.navigate(Routes.FindHotelView)
+  }
 
   onChangeText() {
 
