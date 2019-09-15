@@ -81,9 +81,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20
   },
   headerTitle: {
-    fontSize: 30,
-    fontFamily: AppFont.titleExtraLargeMedium.name,
-    fontWeight: AppFont.titleExtraLargeMedium.weight,
+    fontSize: AppFont.titleExtraLargeBold.size,
+    fontFamily: AppFont.titleExtraLargeBold.name,
+    fontWeight: AppFont.titleExtraLargeBold.weight,
     color: Color.darkText
   }
 })
