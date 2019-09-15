@@ -4,12 +4,14 @@ import { createStackNavigator } from 'react-navigation'
 
 import { Icons } from '../Constants/Assets'
 import FlightsFeedView from '../Views/Flights/FlightsFeedView'
+import FindFlightView from '../Views/Flights/FindFlightView'
 
 import Routes from './Routes'
 
 export const FlightsNavigator = createStackNavigator(
   {
-    [Routes.FlightsFeedView]: { screen: FlightsFeedView }
+    [Routes.FlightsFeedView]: { screen: FlightsFeedView },
+    [Routes.FindFlightView]: {screen: FindFlightView}
   },
   {
     navigationOptions: ({ navigation }) => ({

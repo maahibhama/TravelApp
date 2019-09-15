@@ -15,5 +15,6 @@ export default {
   FlightsFeedView: 'FlightsFeedView',
   ChartbotView: 'ChartbotView',
   HotelsFeedView: 'HotelsFeedView',
-  ProfileView: 'ProfileView'
+  ProfileView: 'ProfileView',
+  FindFlightView: 'FindFlightView',
 }

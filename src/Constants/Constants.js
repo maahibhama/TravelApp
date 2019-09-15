@@ -65,3 +65,8 @@ export const Countries = [
 
 export const PlaceUrl =
   'https://www.wien.info/media/images/40367-graben-einkaufen-shopping-altstadt-einkaufsstrassen-3to2.jpeg/image_teaser-lead'
+
+ export const FlightTripOptions = {
+   oneWay: "one_way",
+   return: 'return'
+ } 
